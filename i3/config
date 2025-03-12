@@ -12,7 +12,8 @@
 set $mod Mod1
 
 #setting background image
-exec_always --no-startup-id feh --no-fehbg --bg-fill /home/w1nn13/Pictures/wallpaper.jpg
+exec_always --no-startup-id feh --no-fehbg --bg-fill /home/w1nn13/.config/i3/wallpaper.jpg
+
 exec_always --no-startup-id picom -b
 
 
@@ -209,6 +210,9 @@ bindsym $mod+r mode "resize"
 # lock i3
 bindsym $mod+Shift+x exec i3lock --color "$bg-color" 
 
+# adding screenshot capabilities
+bindsym Print exec scrot ~/Pictures/%Y-%m-%d-%H%M%S.png
+
 
 
 # aesthetics
@@ -249,3 +253,6 @@ bar {
 # window gaps
 gaps inner 10
 gaps outer 2
+
+
+

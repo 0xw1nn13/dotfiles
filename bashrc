@@ -12,7 +12,6 @@ PS1='[\u@\h \W]\$ '
 
 alias gs='git status'
 alias update='sudo pacman -Syu'
-alias rcd='ranger_cd'
 
 parse_git_branch() {
   git branch 2>/dev/null | sed -n '/\* /s///p'
@@ -33,4 +32,6 @@ function ranger_cd() {
     fi
     rm -f "$tempfile"
 }
+alias rcd='ranger_cd'
 
+alias obsidian="~/obsidian/appimage/Obsidian-1.8.9.AppImage"
